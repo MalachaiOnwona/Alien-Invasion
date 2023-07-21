@@ -1,15 +1,15 @@
 import pygame
 from pygame.sprite import Sprite
 
-class Alien(Sprite):
 
+class Alien(Sprite):
     def __init__(self, settings, window):
         super(Alien, self).__init__()
 
         self.window = window
         self.settings = settings
 
-        self.image = pygame.image.load('Alien Invasion/alienspacecraft.bmp')
+        self.image = pygame.image.load("Alien Invasion/alienspacecraft.bmp")
         self.rect = self.image.get_rect()
 
         self.rect.x = self.rect.width
@@ -17,7 +17,6 @@ class Alien(Sprite):
 
         self.xcoord = float(self.rect.x)
 
-    
     def blitme(self):
         self.window.blit(self.image, self.rect)
 

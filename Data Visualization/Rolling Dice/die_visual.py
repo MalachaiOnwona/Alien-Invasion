@@ -10,13 +10,18 @@ for roll_num in range(1000):
     rolls.append(roll)
 
 frequencies = []
-possible_rolls = range(1, die.num_sides+1)
+possible_rolls = range(1, die.num_sides + 1)
 
 for num in possible_rolls:
     frequency = rolls.count(num)
     frequencies.append(frequency)
 
 
-labels = {'x': 'Result', 'y': 'Frequency of Result'}
-figure = px.bar(x=possible_rolls, y=frequencies, title= 'Results of Rolling One D6 1,000 Times', labels= labels)
+labels = {"x": "Result", "y": "Frequency of Result"}
+figure = px.bar(
+    x=possible_rolls,
+    y=frequencies,
+    title="Results of Rolling One D6 1,000 Times",
+    labels=labels,
+)
 figure.show()
